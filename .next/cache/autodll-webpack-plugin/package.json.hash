@@ -1,0 +1,1 @@
+{"name":"unnamed-app","version":"1.0.0","main":"index.js","scripts":{"dev":"next","build":"next build","start":"next start"},"keywords":[],"author":"","license":"ISC","dependencies":{"next":"^9.1.7","react":"^16.12.0","react-dom":"^16.12.0","styled-components":"^4.4.1"},"devDependencies":{},"description":"","readme":"ERROR: No README data found!","_id":"unnamed-app@1.0.0"}
