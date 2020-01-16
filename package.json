@@ -1,21 +1,22 @@
 {
-  "name": "unnamed-app",
+  "name": "help-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Helping to help",
+  "main": "server.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "node server",
+    "start": "node server",
+    "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": "https://github.com/TamiBerrocal/unnamed-app.git",
+  "author": "Tamara Berrocal <tamaraberrocal@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "next": "^9.1.7",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^4.4.1"
-  },
-  "devDependencies": {},
-  "description": ""
+    "config": "^3.2.4",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7"
+  }
 }
