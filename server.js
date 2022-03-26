@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import express from 'express';
 import {
 	connectToDatabase,
@@ -16,15 +15,23 @@ connectToDatabase();
 /* DECLARE ENDPOINTS */
 
 // GET
-app.get('/', (_, res) => {
-	const users = getUsers();
-	if (users) res.json(users); else res.status(404).json({ success: false });
+app.get('/', async (_, res) => {
+	try {
+		const users = await getUsers();
+		if (users) res.json(users); else console.log({ success: false });
+	} catch (error) {
+		console.log({ success: false });
+	}
 });
 
 // POST
-app.post('/', (req, res) => {
-	const user = res.json(createNewUser(req.body));
-	if (user) res.json(user); else res.status(404).json({ success: false });
+app.post('/', async (req, res) => {
+	try {
+		const user = await res.json(createNewUser(req.body));
+		if (user) console.log(user); else console.log({ success: false });
+	} catch (error) {
+		console.log({ success: false });
+	}
 });
 
 // UPDATE
